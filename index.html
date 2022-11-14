@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="donny.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.jpeg" shadow-intensity="1.02" environment-image="whipple_creek_regional_park_04_1k.hdr" skybox-image="whipple_creek_regional_park_04_1k.hdr" shadow-softness="0.49" camera-orbit="-175.5deg 85.64deg auto">
+      <button class="Hotspot" slot="hotspot-1" data-position="21.263316273647867m 101.32079386471143m 17.438866041801383m" data-normal="0.7317850736725051m 0.5213545847301365m 0.43895330381601355m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Donny小小兵</div>
+      </button><button class="Hotspot" slot="hotspot-2" data-position="18.744606399897606m 36.86875724580883m 24.764166998805912m" data-normal="0.5901046195062827m -0.10808889805820174m 0.800058327969848m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">招牌吊帶褲</div>
+      </button><button class="Hotspot" slot="hotspot-4" data-position="-24.322044925416833m 88.49132987845103m 29.738786150147646m" data-normal="-0.9974171233646537m 0.07182675002378519m 1.5948742332080366e-17m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">護目鏡</div>
+      </button><button class="Hotspot" slot="hotspot-5" data-position="-21.478962213089225m 63.40182911855603m 22.041037654777895m" data-normal="-0.5980650900700711m -0.06175842794886612m 0.799064480887971m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">黃皮膚</div>
+      </button>
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>  
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  </body>
+</html>
